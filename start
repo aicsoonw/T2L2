@@ -1,0 +1,60 @@
+#задание 1
+print("Задание 1")
+input1 = input()
+input1_split = input1.split(' ')
+for x in range(0,len(input1_split)):
+    if len(input1_split[x]) >= 5:
+        print(input1_split[x])
+
+print(" ")
+#задание 2
+print("задание 2")
+my_string = "Иванов;Иван;Иванович;23 года;Студент 3 курса;Петров;Семен;Игоревич;22 года;Студент 2 курса"
+my_string_split = my_string.split(';')
+print("ФИО                              Категория               Возраст         ")
+name1 = my_string_split[0] + " " + my_string_split[1] + " " + my_string_split[2]
+name2 = my_string_split[5] + " " + my_string_split[6] + " " + my_string_split[7]
+print(name1 + "         " + my_string_split[3] + "       " + my_string_split[4])
+print(name2 + "         " + my_string_split[8] + "       " + my_string_split[9])
+print(" ")
+
+#задание 3
+print("задание 3")
+user = []
+my_string2 = "Иванов Иван Иванович;23 года;Студент 3 курса;Петров Семен Игоревич;22 года;Студент 2 курса;Иванов Семен Игоревич;22 года;Студент 2 курса;_Акибов Ярослав Наумович;23 года;Студент 3 курса;_Борков Станислав Максимович;21 год;Студент 1 курса;Петров Семен Семенович;21 год;Студент 1 курса;_Романов Станислав Андреевич;23 года;Студент 3 курса;Петров Всеволод Борисович;21 год;Студент 2 курс"
+my_string2_split = my_string2.split(';')
+my_string2_length = len(my_string2_split)/3
+
+for x in range(0,int(my_string2_length)):
+        user.append(x)
+        user[x] = my_string2_split[x*3+0] + " " + my_string2_split[x*3+1] + " " + my_string2_split[x*3+2]
+        if user[x].startswith('Петров') == 1:
+            print(user[x])
+
+print(" ")
+
+#задание 4
+print("задание 4")
+
+word=[]
+for x in range(0,10):
+    x1 = x+1
+    print("Enter word #: " + str(x1))
+    word.append(x)
+    word[x] = input()
+
+print(word)
+
+print("удаление первых двух элементов")
+del word[0]
+del word[1]
+
+print(word)
+
+for x in range(0,2):
+    x1 = x + 1
+    print("Enter element #: " + str(x1))
+    in2=input()
+    word.insert(x,in2)
+
+print(word)
