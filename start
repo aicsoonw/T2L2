@@ -12,10 +12,10 @@ print("задание 2")
 my_string = "Иванов;Иван;Иванович;23 года;Студент 3 курса;Петров;Семен;Игоревич;22 года;Студент 2 курса"
 my_string_split = my_string.split(';')
 print("ФИО                              Категория               Возраст         ")
-name1 = my_string_split[0] + " " + my_string_split[1] + " " + my_string_split[2]
-name2 = my_string_split[5] + " " + my_string_split[6] + " " + my_string_split[7]
-print(name1 + "         " + my_string_split[3] + "       " + my_string_split[4])
-print(name2 + "         " + my_string_split[8] + "       " + my_string_split[9])
+my_string_split_len = len(my_string_split)
+for x in range(0, int(my_string_split_len)):
+    name1 = my_string_split[x+0] + " " + my_string_split[x+1] + " " + my_string_split[x+2]
+    print(name1 + "         " + my_string_split[x+3] + "       " + my_string_split[x+4])
 print(" ")
 
 #задание 3
